@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bosco Sebastian | CSE Student - LPU</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+  <div class="bg-pattern"></div>
+  <div class="bg-gradient"></div>
+
+  <main>
+
+    <aside class="sidebar" data-sidebar data-aos="fade-right" data-aos-duration="1000">
+      <div class="sidebar-header">
+        <div class="sidebar-status">
+          <span class="status-indicator"></span>
+          <span class="status-text">Open to opportunities</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-info">
+
+        <div class="avatar-wrapper">
+          <div class="avatar-icon">
+            <img src="images/sidebar-photo.png" alt="Bosco Sebastian">
+          </div>
+          <div class="avatar-ring"></div>
+          <div class="avatar-badge">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+
+        <div class="info-content">
+          <h1 class="name">Bosco Sebastian</h1>
+          <p class="title">B.Tech CSE · Lovely Professional University</p>
+          <div class="typing-container">
+            <span class="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+          <div class="badge-container">
+            <span class="badge">
+              <i class="fas fa-crown"></i> CGPA: 6.95
+            </span>
+            <span class="badge">
+              <i class="fas fa-percentage"></i> 12th: 93%
+            </span>
+            <span class="badge">
+              <i class="fas fa-percentage"></i> 10th: 95%
+            </span>
+          </div>
+        </div>
+
+        <button class="expand-btn" data-sidebar-btn>
+          <span>View Contact Details</span>
+          <i class="fas fa-arrow-down"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-contact">
+        <div class="separator"></div>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">EMAIL</span>
+              <a href="mailto:boscosebastian37@gmail.com" class="contact-value">boscosebastian37@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">PHONE</span>
+              <a href="tel:+916238947512" class="contact-value">+91 62389 47512</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">LOCATION</span>
+              <span class="contact-value">Phagwara, Punjab</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">UNIVERSITY</span>
+              <span class="contact-value">Lovely Professional University</span>
+              <span class="contact-sub">2023 - 2027</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-links">
+          <a href="https://github.com/Bosco37" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/boscoseb/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-content">
+
+      <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="nav-brand">
+          <div class="brand-icon">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <span class="brand-text">bosco@student:~$</span>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="nav-link active" data-nav-link="home">
+              <i class="fas fa-home"></i> Home
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-nav-link="about">
+              <i class="fas fa-user"></i> About
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-nav-link="resume">
+              <i class="fas fa-file-alt"></i> Resume
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-nav-link="projects">
+              <i class="fas fa-code-branch"></i> Projects
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-nav-link="certifications">
+              <i class="fas fa-certificate"></i> Certifications
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-nav-link="contact">
+              <i class="fas fa-paper-plane"></i> Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="home active" data-page="home" id="home">
+        <div class="home-hero">
+          <div class="hero-content">
+            <div class="hero-greeting">👋 Hello, I'm</div>
+            <h1 class="hero-name">Bosco Sebastian</h1>
+            <p class="hero-subtitle">B.Tech CSE Student at <span class="highlight">Lovely Professional University</span>
+            </p>
+            <p class="hero-description">Aspiring software engineer passionate about building impactful web applications,
+              solving complex problems, and continuous learning.</p>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="stat-value">6.95</span>
+                <span class="stat-label">CGPA</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-value">93%</span>
+                <span class="stat-label">Class 12</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-value">95%</span>
+                <span class="stat-label">Class 10</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button class="hero-btn primary" data-nav-link="projects">
+                <i class="fas fa-code-branch"></i> Explore My Work
+              </button>
+              <button class="hero-btn secondary" data-nav-link="contact">
+                <i class="fas fa-paper-plane"></i> Contact Me
+              </button>
+            </div>
+            <div class="hero-socials">
+              <a href="https://github.com/Bosco37" target="_blank" class="hero-social-link"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/boscoseb/" target="_blank" class="hero-social-link"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=boscosebastian37@gmail.com" target="_blank"
+                class="hero-social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="hero-photo-wrapper">
+            <div class="hero-photo-ring"></div>
+            <div class="hero-photo-inner">
+              <img src="images/profile.png" alt="Bosco Sebastian Profile Photo">
+            </div>
+            <div class="hero-photo-badge"><i class="fas fa-code"></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="about" data-page="about" id="about">
+        <div class="home-about-section" data-aos="fade-up" data-aos-delay="100">
+          <div class="home-about-title-wrap">
+            <h2 class="home-about-title">About Me</h2>
+            <div class="home-about-line"></div>
+          </div>
+          <div class="home-about-body single-column">
+            <div class="home-about-text">
+              <p>
+                A passionate tech enthusiast and Computer Science student at <strong>Lovely Professional
+                  University</strong>,
+                with a strong foundation in C++, Python, Java, and web development. I love building impactful projects
+                that solve real-world problems — from CPU schedulers and network visualizers to quiz platforms with
+                real-time leaderboards.
+              </p>
+              <p>
+                With hands-on experience in both systems programming and web development, I'm driven by clean code,
+                creative problem-solving, and continuous learning. When I'm not coding, you'll find me exploring
+                tech communities, working on certifications, or sharpening my competitive programming skills.
+                I'm currently aiming to grow as a full-stack developer and systems engineer.
+              </p>
+              <div class="home-about-actions">
+                <button class="home-about-btn primary" data-nav-link="contact">
+                  <i class="fas fa-paper-plane"></i> Get In Touch
+                </button>
+                <a href="https://drive.google.com/file/d/1poB4psRbewZDB-jyOVgJ49LBCARrZ_Vs/view?usp=sharing"
+                  class="home-about-btn secondary" target="_blank">
+                  <i class="fas fa-file-alt"></i> View CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section-header" data-aos="fade-up" style="margin-top: 80px;">
+          <h2 class="section-title">
+            <i class="fas fa-rocket title-icon"></i> Discover My Expertise
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Student</h3>
+            <p>B.Tech Computer Science & Engineering at LPU. Consistently maintaining academic performance with CGPA
+              6.95.</p>
+          </div>
+
+          <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Developer</h3>
+            <p>Skilled in C++, Python, Java. Built CPU scheduler, infection visualizer, and online exam leaderboard.
+            </p>
+          </div>
+
+          <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Certified</h3>
+            <p>C++ Programming, TCP/IP, Network Protocols. AWS Student Community Day participant.</p>
+          </div>
+        </div>
+
+        <div class="skills-section" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="section-subtitle">
+            <i class="fas fa-chart-simple"></i> Technical Proficiencies
+          </h3>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="fas fa-code"></i>
+                <h4>Languages</h4>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-cplusplus-plain colored"></i>
+                    <span>C++</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 85%"></div>
+                  </div>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-java-plain colored"></i>
+                    <span>Java</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 75%"></div>
+                  </div>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-c-plain colored"></i>
+                    <span>C</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%"></div>
+                  </div>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 70%"></div>
+                  </div>
+                  <span class="skill-percent">70%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="fas fa-layer-group"></i>
+                <h4>Frameworks</h4>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-flask-original colored"></i>
+                    <span>Flask</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 75%"></div>
+                  </div>
+                  <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-qt-original colored"></i>
+                    <span>Qt</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 70%"></div>
+                  </div>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML/CSS</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 85%"></div>
+                  </div>
+                  <span class="skill-percent">85%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="fas fa-database"></i>
+                <h4>Tools & Platforms</h4>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-mysql-plain colored"></i>
+                    <span>MySQL</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%"></div>
+                  </div>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="devicon-amazonwebservices-original colored"></i>
+                    <span>AWS</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 65%"></div>
+                  </div>
+                  <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-label">
+                    <i class="fas fa-cloud" style="color: #00758F;"></i>
+                    <span>Cloudstack</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-fill" style="width: 60%"></div>
+                  </div>
+                  <span class="skill-percent">60%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="soft-skills-section" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="section-subtitle">
+            <i class="fas fa-brain"></i> Soft Skills
+          </h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon"><i class="fas fa-lightbulb"></i></div>
+              <span>Problem-Solving &amp; Critical Thinking</span>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon"><i class="fas fa-people-group"></i></div>
+              <span>Collaboration &amp; Teamwork</span>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon"><i class="fas fa-clock"></i></div>
+              <span>Time Management</span>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon"><i class="fas fa-chess-king"></i></div>
+              <span>Decision Making</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="resume" data-page="resume" id="resume">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-stream title-icon"></i> Academic Resume
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-header">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Education</h3>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Current</span>
+                  <h4>B.Tech Computer Science & Engineering</h4>
+                  <p class="timeline-institution">Lovely Professional University</p>
+                  <p class="timeline-meta">CGPA: 6.95 | 2023 - 2027</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Completed</span>
+                  <h4>Intermediate (Class 12)</h4>
+                  <p class="timeline-institution">Marygiri Higher Secondary School</p>
+                  <p class="timeline-meta">Percentage: 93% | 2021 - 2023</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Completed</span>
+                  <h4>Matriculation (Class 10)</h4>
+                  <p class="timeline-institution">Marygiri Higher Secondary School</p>
+                  <p class="timeline-meta">Percentage: 95% | 2020 - 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-header">
+              <i class="fas fa-trophy"></i>
+              <h3>Training & Achievements</h3>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Training</span>
+                  <h4>Mastering C++ Programming</h4>
+                  <p class="timeline-institution">Lovely Professional University</p>
+                  <p class="timeline-meta">Jun 2025 - Jul 2025</p>
+                  <div class="timeline-tags">
+                    <span><i class="devicon-cplusplus-plain"></i> C++</span>
+                    <span><i class="fas fa-microchip"></i> STL</span>
+                    <span><i class="devicon-qt-original"></i> Qt</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Event</span>
+                  <h4>AWS Student Community Day</h4>
+                  <p class="timeline-institution">Jalandhar</p>
+                  <p class="timeline-meta">Workshop Participant • Nov 2025</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Hackathon</span>
+                  <h4>Code Off Duty</h4>
+                  <p class="timeline-institution">Campus-level</p>
+                  <p class="timeline-meta">Participant • Mar 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projects" data-page="projects" id="projects">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-flask title-icon"></i> Academic Projects
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-img-wrap">
+              <img src="images/project_exam_leaderboard.png" alt="Online Exam Leaderboard" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-icon"><i class="fas fa-trophy"></i></div>
+            <span class="project-category">Flask</span>
+            <h3>Online Exam Leaderboard</h3>
+            <p class="project-duration"
+              style="font-size: 0.85rem; color: var(--light-gray); margin-top: 5px; margin-bottom: 10px;"><i
+                class="fas fa-calendar-alt" style="margin-right: 5px;"></i> Jan 2024 - Feb 2024</p>
+            <p class="project-description">Quiz platform with auto-scoring and real-time leaderboard. Built with Flask
+              and Jinja2 templating.</p>
+            <div class="project-tech-stack">
+              <span><i class="devicon-flask-original"></i> Flask</span>
+              <span><i class="devicon-python-plain"></i> Python</span>
+              <span><i class="fas fa-code"></i> Jinja2</span>
+              <span><i class="devicon-html5-plain"></i> HTML/CSS</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Bosco37/Online-Exam-Leaderboard-Tracker-" class="project-link" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-img-wrap">
+              <img src="images/project_cpu_scheduler.png" alt="CPU Scheduler Simulator" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-icon"><i class="fas fa-microchip"></i></div>
+            <span class="project-category">C++</span>
+            <h3>CPU Scheduler Simulator</h3>
+            <p class="project-duration"
+              style="font-size: 0.85rem; color: var(--light-gray); margin-top: 5px; margin-bottom: 10px;"><i
+                class="fas fa-calendar-alt" style="margin-right: 5px;"></i> Mar 2024 - Apr 2024</p>
+            <p class="project-description">Implementation of FCFS, SJF, Priority, and Round Robin algorithms with Gantt
+              chart visualization.</p>
+            <div class="project-tech-stack">
+              <span><i class="devicon-cplusplus-plain"></i> C++</span>
+              <span><i class="fas fa-microchip"></i> STL</span>
+              <span><i class="fas fa-calculator"></i> Algorithms</span>
+              <span><i class="fas fa-cubes"></i> OOP</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Bosco37/Intelligent-CPU-Scheduler-Simulator" class="project-link"
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-img-wrap">
+              <img src="images/project_network_visualizer.png" alt="Network Infection Visualizer" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
+            <span class="project-category">C++/Qt</span>
+            <h3>Network Infection Visualizer</h3>
+            <p class="project-duration"
+              style="font-size: 0.85rem; color: var(--light-gray); margin-top: 5px; margin-bottom: 10px;"><i
+                class="fas fa-calendar-alt" style="margin-right: 5px;"></i> May 2024 - Jun 2024</p>
+            <p class="project-description">Qt-based tool to visualize BFS/DFS infection spread across network topologies
+              for educational purposes.</p>
+            <div class="project-tech-stack">
+              <span><i class="devicon-cplusplus-plain"></i> C++</span>
+              <span><i class="devicon-qt-original"></i> Qt</span>
+              <span><i class="fas fa-network-wired"></i> BFS/DFS</span>
+              <span><i class="fas fa-project-diagram"></i> Graphs</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Bosco37/Contact-Tracer-App" class="project-link" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="certifications" data-page="certifications" id="certifications">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-certificate title-icon"></i> Certifications
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="certs-display">
+          <a href="https://www.coursera.org/account/accomplishments/verify/WTCRMDIWPPQJ" class="cert-card-link"
+            target="_blank" data-aos="fade-up" data-aos-delay="100">
+            <div class="cert-card">
+              <div class="cert-img-wrap">
+                <img src="images/cert_tcpip.png" alt="TCP/IP Certificate" class="cert-img" loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=cert-img-fallback><i class=fas fa-network-wired></i></div>'">
+              </div>
+              <div class="cert-body">
+                <h3><i class="fas fa-network-wired" style="color: var(--primary); margin-right: 8px;"></i>TCP/IP and
+                  Advanced Topics</h3>
+                <p class="cert-issuer">University of Colorado · Coursera</p>
+                <p class="cert-date">Issued Nov 2024 | <i class="fas fa-clock"></i> Duration: 4 Weeks</p>
+                <span class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify Certificate</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.coursera.org/account/accomplishments/verify/HZPRKVB7DJA6" class="cert-card-link"
+            target="_blank" data-aos="fade-up" data-aos-delay="200">
+            <div class="cert-card">
+              <div class="cert-img-wrap">
+                <img src="images/cert_p2p.png" alt="Peer-to-Peer Protocols Certificate" class="cert-img" loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=cert-img-fallback><i class=fas fa-diagram-project></i></div>'">
+              </div>
+              <div class="cert-body">
+                <h3><i class="fas fa-diagram-project" style="color: var(--primary); margin-right: 8px;"></i>Peer-to-Peer
+                  Protocols &amp; LAN</h3>
+                <p class="cert-issuer">University of Colorado · Coursera</p>
+                <p class="cert-date">Issued Oct 2024 | <i class="fas fa-clock"></i> Duration: 4 Weeks</p>
+                <span class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify Certificate</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.coursera.org/account/accomplishments/verify/OJ76OQZP87P7" class="cert-card-link"
+            target="_blank" data-aos="fade-up" data-aos-delay="300">
+            <div class="cert-card">
+              <div class="cert-img-wrap">
+                <img src="images/cert_network.png" alt="Network Communication Certificate" class="cert-img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=cert-img-fallback><i class=fas fa-wifi></i></div>'">
+              </div>
+              <div class="cert-body">
+                <h3><i class="fas fa-wifi" style="color: var(--primary); margin-right: 8px;"></i>Fundamentals of Network
+                  Communication</h3>
+                <p class="cert-issuer">University of Colorado · Coursera</p>
+                <p class="cert-date">Issued Sep 2024 | <i class="fas fa-clock"></i> Duration: 4 Weeks</p>
+                <span class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify Certificate</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1P6n3gopNO39IGVePcULb1N1le2wGVlns/view?usp=sharing"
+            class="cert-card-link" target="_blank" data-aos="fade-up" data-aos-delay="400">
+            <div class="cert-card">
+              <div class="cert-img-wrap">
+                <img src="images/cert_cpp.jpg" alt="C++ Programming Certificate" class="cert-img" loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=cert-img-fallback><i class=fas fa-code></i></div>'">
+              </div>
+              <div class="cert-body">
+                <h3><i class="fas fa-code" style="color: var(--primary); margin-right: 8px;"></i>Mastering C++
+                  Programming</h3>
+                <p class="cert-issuer">Lovely Professional University</p>
+                <p class="cert-date">Issued Jun 2025 | <i class="fas fa-clock"></i> Duration: 8 Weeks</p>
+                <span class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify Certificate</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="section-header" data-aos="fade-up" style="margin-top: 60px;">
+          <h2 class="section-title">
+            <i class="fas fa-trophy title-icon"></i> Achievements
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="resume-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+          <div class="resume-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Event</span>
+                  <h4>AWS Student Community Day</h4>
+                  <p class="timeline-institution">Jalandhar</p>
+                  <p class="timeline-meta">Workshop Participant • Nov 2025</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Hackathon</span>
+                  <h4>Code Off Duty</h4>
+                  <p class="timeline-institution">Campus-level</p>
+                  <p class="timeline-meta">Participant • Mar 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="contact" data-page="contact" id="contact">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-paper-plane title-icon"></i> Get In Touch
+          </h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-cards" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <h4>Email</h4>
+              <a href="mailto:boscosebastian37@gmail.com">boscosebastian37@gmail.com</a>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-phone-alt"></i>
+              <h4>Phone</h4>
+              <a href="tel:+916238947512">+91 62389 47512</a>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <h4>Campus</h4>
+              <p>Phagwara, Punjab • LPU</p>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-university"></i>
+              <h4>Education</h4>
+              <p>B.Tech CSE · Lovely Professional University<br><small>2023 – 2027</small></p>
+            </div>
+          </div>
+
+          <div class="contact-form-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+              <!-- Web3Forms access key - get yours free at web3forms.com -->
+              <input type="hidden" name="access_key" value="979a63b1-b4dd-48cf-b158-f73553f08944">
+              <input type="hidden" name="subject" value="New Message from Portfolio - Bosco Sebastian">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2026 Bosco Sebastian. Computer Science & Engineering, LPU.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Bosco37" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/boscoseb/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js?v=scrolling_v1"></script>
+</body>
+
+</html>
